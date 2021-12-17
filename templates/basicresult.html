@@ -19,7 +19,7 @@
 
       <div style="text-align:center;">
           <h3><a><span>各アカウントのテキストをクリックして、アカウントの情報を閲覧してください。判定可能になった時点でアンケートフォームから判定結果を回答してください。</span></a></h3>
-          <h3><a><span>10個のアカウントの判定が終わったらページ下部の「次へ」から次のページへ移動し、さらに10個のアカウントを判定してください。</span></a></h3>
+          <h3><a><span>10個のアカウントの判定が終わったらページ下部の「次へ」から次のページへ移動してください。</span></a></h3>
           <h3><a><span>※ページのリロードを行うと、ページの内容が変わってしまうためリロードは行わないでください。</span></a></h3>
       </div>
 
@@ -46,9 +46,10 @@
  <div id="a-box">
     <h2><a><span>・フォローフォロワー数</span><br></a></h2>
     <h3><a><span>フォロー:{{A1_result.Follow}}　　フォロワー:{{A1_result.Follower}}</span><br></a></h3>
-    <h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+    <h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
     <h3><a><span>直近{{A1_result.recent_pre.0}}件のツイートのうち{{A1_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
-   <h2><a><span>・アカウント作成日</span><br></a></h2>
+    <h3><a><span>{{A1_result.recent_same_pre}}</span><br></a></h3>
+    <h2><a><span>・アカウント作成日</span><br></a></h2>
   <h3><a><span>{{A1_result.create_day}}</span><br></a></h3>
   <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
   <h3><a><span>このアカウントの上位100人のフォロワーのうち{{A1_result.Followers_data.0}}人が鍵アカウントで、{{A1_result.Followers_data.1}}人がほとんどRTしか行なっていないアカウントの可能性があります。</span><br></a></h3>
@@ -56,9 +57,7 @@
   <h3><a><span>{{A1_result.ids}}</span><br></a></h3>
   <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
   <h3><a><span>{{A1_result.profile_url}}</span><br></a></h3>
- <h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
- <h3><a><span>{{A1_result.recent_same_pre}}</span><br></a></h3>
- <h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+ <h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
   <h3><a><span>{{A1_result.same_img}}</span><br></a></h3>
  {% for list in A1_result.pre_img %}
 <a href="{{list}}" class="imglink">画像リンク</a>
@@ -89,9 +88,10 @@
 <div id="a-box">
   <h2><a><span>・フォローフォロワー数</span><br></a></h2>
   <h3><a><span>フォロー:{{A2_result.Follow}}　　フォロワー:{{A2_result.Follower}}</span><br></a></h3>
-  <h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+  <h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
   <h3><a><span>直近{{A2_result.recent_pre.0}}件のツイートのうち{{A2_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
- <h2><a><span>・アカウント作成日</span><br></a></h2>
+  <h3><a><span>{{A2_result.recent_same_pre}}</span><br></a></h3>
+  <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A2_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
 <h3><a><span>このアカウントの上位100人のフォロワーのうち{{A2_result.Followers_data.0}}人が鍵アカウントで、{{A2_result.Followers_data.1}}人がほとんどRTしか行なっていないアカウントの可能性があります。</span><br></a></h3>
@@ -99,9 +99,7 @@
 <h3><a><span>{{A2_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A2_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A2_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A2_result.same_img}}</span><br></a></h3>
 {% for list in A2_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -131,8 +129,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A3_result.Follow}}　　フォロワー:{{A3_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A3_result.recent_pre.0}}件のツイートのうち{{A3_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A3_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A3_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -141,9 +140,7 @@
 <h3><a><span>{{A3_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A3_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A3_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A3_result.same_img}}</span><br></a></h3>
 {% for list in A3_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -173,8 +170,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A4_result.Follow}}　　フォロワー:{{A4_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A4_result.recent_pre.0}}件のツイートのうち{{A4_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A4_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A4_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -183,9 +181,7 @@
 <h3><a><span>{{A4_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A4_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A4_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A4_result.same_img}}</span><br></a></h3>
 {% for list in A4_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -216,8 +212,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A5_result.Follow}}　　フォロワー:{{A5_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A5_result.recent_pre.0}}件のツイートのうち{{A5_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A5_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A5_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -226,9 +223,7 @@
 <h3><a><span>{{A5_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A5_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A5_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A5_result.same_img}}</span><br></a></h3>
 {% for list in A5_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -259,8 +254,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A6_result.Follow}}　　フォロワー:{{A6_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A6_result.recent_pre.0}}件のツイートのうち{{A6_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A6_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A6_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -269,9 +265,7 @@
 <h3><a><span>{{A6_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A6_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A6_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A6_result.same_img}}</span><br></a></h3>
 {% for list in A6_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -302,8 +296,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A7_result.Follow}}　　フォロワー:{{A7_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A7_result.recent_pre.0}}件のツイートのうち{{A7_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A7_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A7_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -312,9 +307,7 @@
 <h3><a><span>{{A7_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A7_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A7_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A7_result.same_img}}</span><br></a></h3>
 {% for list in A7_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -345,8 +338,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A8_result.Follow}}　　フォロワー:{{A8_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A8_result.recent_pre.0}}件のツイートのうち{{A8_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A8_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A8_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -355,9 +349,7 @@
 <h3><a><span>{{A8_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A8_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A8_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A8_result.same_img}}</span><br></a></h3>
 {% for list in A8_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -388,8 +380,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A9_result.Follow}}　　フォロワー:{{A9_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A9_result.recent_pre.0}}件のツイートのうち{{A9_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A9_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A9_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -398,9 +391,7 @@
 <h3><a><span>{{A9_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A9_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A9_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A9_result.same_img}}</span><br></a></h3>
 {% for list in A9_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -431,8 +422,9 @@
 <div id="a-box">
 <h2><a><span>・フォローフォロワー数</span><br></a></h2>
 <h3><a><span>フォロー:{{A10_result.Follow}}　　フォロワー:{{A10_result.Follower}}</span><br></a></h3>
-<h2><a><span>・直近の懸賞企画に関するツイート数</span></a></h2>
+<h2><a><span>・直近の懸賞企画に関するツイート数、そのツイートに類似するツイートの有無</span></a></h2>
 <h3><a><span>直近{{A10_result.recent_pre.0}}件のツイートのうち{{A10_result.recent_pre.1}}件が懸賞企画の可能性があるツイートです。</span><br></a></h3>
+<h3><a><span>{{A10_result.recent_same_pre}}</span><br></a></h3>
 <h2><a><span>・アカウント作成日</span><br></a></h2>
 <h3><a><span>{{A10_result.create_day}}</span><br></a></h3>
 <h2><a> <span>・フォロワー上位100人に含まれる懸賞アカウントの可能性のあるアカウント数</span><br></a>
@@ -441,9 +433,7 @@
 <h3><a><span>{{A10_result.ids}}</span><br></a></h3>
 <h2><a><span>・プロフィール内のLINE誘導URLの有無</span><br></a></h2>
 <h3><a><span>{{A10_result.profile_url}}</span><br></a></h3>
-<h2><a> <span>・直近100件のツイートにおける懸賞ツイートの有無、類似するツイートの有無</span><br></a>
-<h3><a><span>{{A10_result.recent_same_pre}}</span><br></a></h3>
-<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像検索リンク</span><br></a></h2>
+<h2><a> <span>・懸賞ツイートに添付されている画像の類似画像</span><br></a></h2>
 <h3><a><span>{{A10_result.same_img}}</span><br></a></h3>
 {% for list in A10_result.pre_img %}
  <a href="{{list}}" class="imglink">画像リンク</a>
@@ -873,7 +863,8 @@
 
 
 
-<button type="submit" name="button">次へ</button>
+<button type="submit" name="button" >
+  <font size="6">次へ</font></button>
 
 </body>
 </html>
