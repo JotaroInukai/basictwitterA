@@ -14,6 +14,10 @@ def basic_form_show2(request):
     return render(request,"basicresult2.html")
 
 
+def basic_form_show3(request):
+    return render(request,"basicresult3.html")
+
+
 def basic_form(request):
     S1=A1()
     S2=A2()
