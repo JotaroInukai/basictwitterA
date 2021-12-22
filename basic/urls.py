@@ -8,4 +8,6 @@ urlpatterns = [
     path('templates/basic_form_show2', views.basic_form_show2, name='basic_form_show2'),
     path('templates/basic_form2', views.basic_form2, name='basic_form2'),
     path('templates/basic_form_show3', views.basic_form_show3, name='basic_form_show3'),
+     path('templates/basic_form_show4', views.basic_form_show4, name='basic_form_show4'),
+    path('templates/basic_form4', views.basic_form4, name='basic_form4'),
 ]
