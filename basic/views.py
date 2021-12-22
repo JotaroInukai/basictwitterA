@@ -4,6 +4,8 @@ from basic.defs import *
 import random
 sagilist=sagilist()
 hisagilist=hisagilist()
+random.shuffle(sagilist)
+random.shuffle(hisagilist)
 # Create your views here.
 def basic_template(request):
     return render(request,"basic.html")
