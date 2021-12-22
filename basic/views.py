@@ -2,6 +2,7 @@ from django.shortcuts import render
 from basic.datas import *
 from basic.defs import *
 import random
+import functools
 
 S1=A1()
 S2=A2()
@@ -39,6 +40,7 @@ random.shuffle(sagilistA)
 random.shuffle(hisagilistA)
 
 # Create your views here.
+@functools.lru_cache()
 def basic_template(request):
     return render(request,"basic.html")
 
