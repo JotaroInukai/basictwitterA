@@ -114,16 +114,16 @@ def basic_form2(request):
     return render(request,'basicresult2.html',payload)
 
 def basic_form4(request):
-    S1=A21()
-    S2=A22()
-    S3=A23()
-    S4=A24()
-    S5=A25()
-    S11=A26()
-    S12=A27()
-    S13=A28()
-    S14=A29()
-    S15=A30()
+    S1=sagilist[10]
+    S2=sagilist[11]
+    S3=sagilist[12]
+    S4=sagilist[13]
+    S5=sagilist[14]
+    S11=hisagilist[10]
+    S12=hisagilist[11]
+    S13=hisagilist[12]
+    S14=hisagilist[13]
+    S15=hisagilist[14]
     groupA=[S1,S2,S3,S4,S5,S11,S12,S13,S14,S15]
     random.shuffle(groupA)
 
