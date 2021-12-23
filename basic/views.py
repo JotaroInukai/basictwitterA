@@ -3,44 +3,75 @@ from basic.datas import *
 from basic.defs import *
 import random
 import functools
-
-S1=A1()
-S2=A2()
-S3=A3()
-S4=A4()
-S5=A5()
-S6=A6()
-S7=A7()
-S8=A8()
-S9=A9()
-S10=A10()
-S21=A21()
-S22=A22()
-S23=A23()
-S24=A24()
-S25=A25()
-S11=A11()
-S12=A12()
-S13=A13()
-S14=A14()
-S15=A15()
-S16=A16()
-S17=A17()
-S18=A18()
-S19=A19()
-S20=A20()
-S26=A26()
-S27=A27()
-S28=A28()
-S29=A29()
-S30=A30()
-sagilistA=[S1,S2,S3,S4,S5,S6,S7,S8,S9,S10,S21,S22,S23,S24,S25]
-hisagilistA=[S11,S12,S13,S14,S15,S16,S17,S18,S19,S20,S26,S27,S28,S29,S30]
-random.shuffle(sagilistA)
-random.shuffle(hisagilistA)
-sagidict={"S1":S1,"S2":S2,"S3":S3,"S4":S4,"S5":S5,"S6":S6,"S7":S7,"S8":S8,"S9":S9,"S10":S10,"S21":S21,"S22":S22,"S23":S23,"S24":S24,"S25":S25}
-hisagidict={"S11":S11,"S12":S12,"S13":S13,"S14":S14,"S15":S15,"S16":S16,"S17":S17,"S18":S18,"S19":S19,"S20":S20,"S26":S26,"S27":S27,"S28":S28,"S29":S29,"S30":S30}
-print("shuffle")
+def sagilist():
+    S1=A1()
+    S2=A2()
+    S3=A3()
+    S4=A4()
+    S5=A5()
+    S6=A6()
+    S7=A7()
+    S8=A8()
+    S9=A9()
+    S10=A10()
+    S21=A21()
+    S22=A22()
+    S23=A23()
+    S24=A24()
+    S25=A25()
+    S11=A11()
+    S12=A12()
+    S13=A13()
+    S14=A14()
+    S15=A15()
+    S16=A16()
+    S17=A17()
+    S18=A18()
+    S19=A19()
+    S20=A20()
+    S26=A26()
+    S27=A27()
+    S28=A28()
+    S29=A29()
+    S30=A30()
+    sagidict={"S1":S1,"S2":S2,"S3":S3,"S4":S4,"S5":S5,"S6":S6,"S7":S7,"S8":S8,"S9":S9,"S10":S10,"S21":S21,"S22":S22,"S23":S23,"S24":S24,"S25":S25}
+    return sagidict
+    
+def hisagilist():   
+    S1=A1()
+    S2=A2()
+    S3=A3()
+    S4=A4()
+    S5=A5()
+    S6=A6()
+    S7=A7()
+    S8=A8()
+    S9=A9()
+    S10=A10()
+    S21=A21()
+    S22=A22()
+    S23=A23()
+    S24=A24()
+    S25=A25()
+    S11=A11()
+    S12=A12()
+    S13=A13()
+    S14=A14()
+    S15=A15()
+    S16=A16()
+    S17=A17()
+    S18=A18()
+    S19=A19()
+    S20=A20()
+    S26=A26()
+    S27=A27()
+    S28=A28()
+    S29=A29()
+    S30=A30()
+    
+    
+    hisagidict={"S11":S11,"S12":S12,"S13":S13,"S14":S14,"S15":S15,"S16":S16,"S17":S17,"S18":S18,"S19":S19,"S20":S20,"S26":S26,"S27":S27,"S28":S28,"S29":S29,"S30":S30}
+    return hisagidict
 # Create your views here.
 
 def basic_template(request):
@@ -62,17 +93,23 @@ def basic_form_show4(request):
 
 def basic_form(request):
    
-    
-    S1=sagilistA[0]
-    S2=sagilistA[1]
-    S3=sagilistA[2]
-    S4=sagilistA[3]
-    S5=sagilistA[4]
-    S11=hisagilistA[0]
-    S12=hisagilistA[1]
-    S13=hisagilistA[2]
-    S14=hisagilistA[3]
-    S15=hisagilistA[4]
+    sagilistA=sagilist()
+    hisagilistA=hisagilist()
+    def1sagilist=list(sagilistA.keys())
+    def1hisagilist=list(hisagilistA.keys())
+    print(def1sagilist)
+    random.shuffle(def1sagilist)
+    random.shuffle(def1hisagilist)
+    S1=sagilistA[def1sagilist[0]]
+    S2=sagilistA[def1sagilist[1]]
+    S3=sagilistA[def1sagilist[2]]
+    S4=sagilistA[def1sagilist[3]]
+    S5=sagilistA[def1sagilist[4]]
+    S11=hisagilistA[def1hisagilist[0]]
+    S12=hisagilistA[def1hisagilist[1]]
+    S13=hisagilistA[def1hisagilist[2]]
+    S14=hisagilistA[def1hisagilist[3]]
+    S15=hisagilistA[def1hisagilist[4]]
     groupA=[S1,S2,S3,S4,S5,S11,S12,S13,S14,S15]
     random.shuffle(groupA)
     print("def1")
@@ -109,6 +146,8 @@ def basic_form(request):
 
 
 def basic_form2(request):
+    sagidict=sagilist()
+    hisagidict=hisagilist()
     data=request.POST.get("hidden_data")
     print(data)
     splitdata=(data.split(","))
@@ -191,6 +230,8 @@ def basic_form2(request):
     return render(request,'basicresult2.html',payload)
 
 def basic_form4(request):
+    sagidict=sagilist()
+    hisagidict=hisagilist()
     data=request.POST.get("hidden_data")
     print(data)
     splitdata=(data.split(","))
