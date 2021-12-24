@@ -97,7 +97,7 @@ def basic_form(request):
     hisagilistA=hisagilist()
     def1sagilist=list(sagilistA.keys())
     def1hisagilist=list(hisagilistA.keys())
-    print(def1sagilist)
+    
     random.shuffle(def1sagilist)
     random.shuffle(def1hisagilist)
     S1=sagilistA[def1sagilist[0]]
@@ -149,13 +149,9 @@ def basic_form2(request):
     sagidict=sagilist()
     hisagidict=hisagilist()
     data=request.POST.get("hidden_data")
-    print(data)
     splitdata=(data.split(","))
-    print(splitdata)
     map_object = map(int, splitdata)
     listofint=list(map_object)
-    print(listofint)
-    print(listofint[2],listofint[3])
     a="S"+str(listofint[0])
     b="S"+str(listofint[1])
     c="S"+str(listofint[2])
@@ -177,8 +173,6 @@ def basic_form2(request):
             del hisagidict[y]
         except KeyError:
             pass
-    print(list(sagidict.keys()))
-    print(list(hisagidict.keys()))
     def2sagilist=list(sagidict.keys())
     def2hisagilist=list(hisagidict.keys())
     random.shuffle(def2sagilist)
@@ -233,9 +227,9 @@ def basic_form4(request):
     sagidict=sagilist()
     hisagidict=hisagilist()
     data=request.POST.get("hidden_data")
-    print(data)
+ 
     splitdata=(data.split(","))
-    print(splitdata)
+ 
     map_object = map(int, splitdata)
     listofint=list(map_object)
     a="S"+str(listofint[0])
@@ -259,8 +253,7 @@ def basic_form4(request):
     s="S"+str(listofint[18])
     t="S"+str(listofint[19])
     def2acountlist=[a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t]
-    print(listofint)
-    print(def2acountlist)
+  
     for x in def2acountlist:
         try:
             del sagidict[x]
@@ -271,8 +264,7 @@ def basic_form4(request):
             del hisagidict[y]
         except KeyError:
             pass
-    print(list(sagidict.keys()))
-    print(list(hisagidict.keys()))
+
     def3sagilist=list(sagidict.keys())
     def3hisagilist=list(hisagidict.keys())
     S1=sagidict[def3sagilist[0]]
@@ -300,7 +292,7 @@ def basic_form4(request):
     A8_result=groupA[7]
     A9_result=groupA[8]
     A10_result=groupA[9]
-    print("def3")
+
 
 
     payload={
